@@ -8,5 +8,8 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "hoek": "^4.2.1"
   }
 }
