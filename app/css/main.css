@@ -44,6 +44,294 @@ body {
 	min-height: 100vh;
 }
 
+/*==============================================================================================
+HEADER SECTION STARTS HERE
+==============================================================================================*/
+
+/* HEADER: LOGO STYLES */
+
+.logo{
+	height: 3.25rem;
+	margin-left: 2rem;
+}
+
+/* HEADER: SEARCH-BAR STYLES */
+
+.search{
+	flex: 0 0 40%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search__input{
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		background-color: var(--color-grey-light-2);
+		border: none;
+		padding: .7rem 2rem;
+		border-radius: 100px;
+		width: 90%;
+		transition: all .2s;
+		margin-right: -3.25rem;
+	}
+
+.search__input:focus{
+			outline: none;
+			width: 100%;
+			background-color: var(--color-grey-light-3);
+		}
+
+.search__input::-webkit-input-placeholder{
+			font-weight: 100;
+			color: var(--color-grey-light-4);
+		}
+
+.search__input:focus + .search__button{
+		background-color: var(--color-grey-light-3);
+	}
+
+.search__button{
+		border: none;
+		background-color: var(--color-grey-light-2);
+	}
+
+.search__button:focus{
+			outline: none;
+		}
+
+.search__button:active{
+			-webkit-transform: translateY(2px);
+			        transform: translateY(2px);
+		}
+
+.search__icon{
+		height: 2rem;
+		width: 2rem;
+		fill: var(--color-grey-dark-3);
+	}
+
+/* HEADER: USER-NAV STYLES */
+
+.user-nav{
+	align-self: stretch;
+
+	display: flex;
+	align-items: center;
+}
+
+.user-nav > *{
+		padding: 0 2rem;
+		cursor: pointer;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+.user-nav > *:hover{
+		background-color: var(--color-grey-light-2);
+	}
+
+.user-nav__icon-box{
+		position: relative;
+	}
+
+.user-nav__icon{
+		height: 2.25rem;
+		width: 2.25rem;
+		fill: var(--color-grey-dark-2);
+	}
+
+.user-nav__notification{
+		font-size: .8rem;
+		height: 1.75rem;
+		width: 1.75rem;
+		border-radius: 50%;
+		background-color: var(--color-primary);
+		color: #FFF;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.1rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+.user-nav__user-photo{
+		height: 3.75rem;
+		border-radius: 50%;
+		margin-right: 1rem;
+	}
+
+/*==============================================================================================
+HEADER SECTION ENDS HERE
+==============================================================================================*/
+
+.gallery{
+
+	display: flex;
+}
+
+.gallery__photo{
+		display: block;
+		width: 100%;
+	}
+
+.overview{
+	border-bottom: 1px solid var(--color-grey-light-2);
+
+	display: flex;
+	align-items: center;
+}
+
+.overview__heading{
+		font-size: 2.25rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 1.5rem 3rem;
+	}
+
+.overview__stars{
+		margin-right: auto;
+		display: flex;
+	}
+
+.overview__icon-star,
+	.overview__icon-location{
+		width: 1.75rem;
+		height: 1.75rem;
+		fill: var(--color-primary);
+	}
+
+.overview__location{
+		flex:1;
+	}
+
+.overview__rating{
+
+	}
+
+.overview__rating-average{
+
+	}
+
+.overview__rating-count{
+
+	}
+
+.btn-inline{
+	border: none;
+	color: var(--color-primary);
+	font-size: inherit;
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 2px;
+	display: inline-block;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.btn-inline:hover{		
+		color: var(--color-grey-dark-1);
+	}
+
+/*==============================================================================================
+NAVIGATION-SIDEBAR SECTION STARTS HERE
+==============================================================================================*/
+
+/* SIDE NAVIGATION */
+
+.side-nav{
+	list-style-type: none;
+	font-size: 1.4rem;
+	margin-top: 3.5rem;
+
+}
+
+.side-nav__item{
+		position: relative;
+	}
+
+.side-nav__item:not(:last-child){
+			margin-bottom: .5rem;
+		}
+
+.side-nav__item::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 3px;
+		background-color: var(--color-primary);
+		-webkit-transform: scaleY(0);
+		        transform: scaleY(0);
+		transition: width .4s cubic-bezier(1,0,0,1) .2s,
+					background-color .1s,
+					-webkit-transform .2s;
+		transition: transform .2s,
+					width .4s cubic-bezier(1,0,0,1) .2s,
+					background-color .1s;
+		transition: transform .2s,
+					width .4s cubic-bezier(1,0,0,1) .2s,
+					background-color .1s,
+					-webkit-transform .2s;
+	}
+
+.side-nav__item:hover::before,
+	.side-nav__item--active::before{
+		-webkit-transform: scaleY(1);
+		        transform: scaleY(1);
+		width: 100%;
+	}
+
+.side-nav__item:active::before{
+		background-color: var(--color-primary-light);
+	}
+
+.side-nav__link:link,
+	.side-nav__link:visited{
+		color: var(--color-grey-light-1);
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 1.5rem 3rem;
+		position: relative;
+		z-index: 10;
+
+		display: flex;
+		align-items: center;
+	}
+
+.side-nav__icon{
+		width: 1.75rem;
+		height: 1.75rem;
+		margin-right: 2rem;
+		fill: currentColor;
+
+	}
+
+/*COPYRIGHT TEXT*/
+
+.legal{
+	font-size: 1.2rem;
+	color: var(--color-grey-light-4);
+	text-align: center;
+	padding: 2.5rem;
+}
+
+/*==============================================================================================
+NAVIGATION-SIDEBAR SECTION ENDS HERE
+==============================================================================================*/
+
+/*==============================================================================================
+PAGE LAYOUT SECTION STARTS HERE
+==============================================================================================*/
+
 .container {
 	max-width: 120rem;
 	margin: 8rem auto;
@@ -54,9 +342,14 @@ body {
 }
 
 .header {
+	font-size: 1.4rem;
 	height: 7rem;
 	background-color: #FFF;
-	border-bottom: var(--color-grey-light-2);
+	border-bottom: 1px solid var(--color-grey-light-2);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .content {
@@ -67,10 +360,17 @@ body {
 	background-color: var(--color-grey-dark-1);
 
 	flex: 0 0 18%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .hotel-view {
-	background-color: #FFF;
-
+	height: 80rem;
 	flex: 1;
 }
+
+/*==============================================================================================
+PAGE LAYOUT ENDS HERE
+==============================================================================================*/
