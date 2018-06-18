@@ -1,7 +1,7 @@
 @import "base/_base";
 
 @import "components/_header";
-@import "components/_hotel-view";
+@import "components/_main-content";
 @import "components/_navigation";
 
 @import "layout/_layout";

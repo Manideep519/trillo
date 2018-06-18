@@ -17,6 +17,12 @@ HEADER SECTION STARTS HERE
 	align-items: center;
 	justify-content: center;
 
+	@media only screen and (max-width: $bp-smallest){
+		order: 1;
+		flex: 0 0 100%;
+		background-color: var(--color-grey-light-2);
+	}
+
 	&__input{
 		font-family: inherit;
 		font-size: inherit;
@@ -34,6 +40,10 @@ HEADER SECTION STARTS HERE
 			outline: none;
 			width: 100%;
 			background-color: var(--color-grey-light-3);
+
+			@media only screen and (max-width: $bp-smallest){
+				width: 90%;
+			}
 		}
 
 		&::-webkit-input-placeholder{
