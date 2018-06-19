@@ -48,7 +48,16 @@
                         </div>
 
                         <div class="user-nav__user">
-                            <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+                            <picture class="user-nav__user">
+                                <!-- at 1800px and above --> 
+                                <source srcset="img/user.jpg" media="(min-width:112.5em)">
+                                <!-- at 900px and above-->
+                                <source srcset="img/user-med-0.jpg" media="(min-width:56.25em)">
+                                <!-- at 300px and above-->
+                                <source srcset="img/user-low-0.jpg" media="(min-width:18.75em)">
+                                <!-- Fall back for srcset a medium pic -->
+                                <img srcset="img/user-med-0.jpg" alt="User photo" class="user-nav__user-photo">
+                            </picture>
                             <span class="user-nav__user-name">Jonas</span>
                         </div>
                     </nav>
@@ -97,7 +106,9 @@
                             </li>
                         </ul>
                         <div class="legal">
-                            &copy; 2017 by trillo. All rights reserved.
+                            <p>Made by <a  href="https://www.linkedin.com/in/manideep-yadav-b37335154/" target="_blank" class="legal__credits">Manideep</a></p>
+                            <p>Design by <a  href="http://codingheroes.io/" target="_blank" class="legal__credits">&nbsp;Jonas</a></p>
+                            <p>&copy; 2017 by trillo. All rights reserved.</p>
                         </div>
                     </nav>
                 <!-- Side-bar Navigation Ends here -->
@@ -109,15 +120,43 @@
                         <!-- Gallery section Starts here -->
                             <div class="gallery">
                                 <figure class="gallery__item">
-                                    <img src="img/hotel-1.jpg" alt="Photo of a hotel 1" class="gallery__photo">
+                                    <picture class="gallery__item">
+                                        <!-- at 1800px and above --> 
+                                        <source srcset="img/hotel-1.jpg" media="(min-width:112.5em)">
+                                        <!-- at 900px and above-->
+                                        <source srcset="img/hotel-med-1.jpg" media="(min-width:56.25em)">
+                                        <!-- at 300px and above-->
+                                        <source srcset="img/hotel-low-1.jpg" media="(min-width:18.75em)">
+                                        <!-- Fall back for srcset a medium pic -->
+                                        <img srcset="img/hotel-med-1.jpg" alt="Photo of a Hotel 1" class="gallery__photo">
+                                    </picture>
+
                                 </figure>
 
                                 <figure class="gallery__item">
-                                    <img src="img/hotel-2.jpg" alt="Photo of a hotel 2" class="gallery__photo">
+                                    <picture class="gallery__item">
+                                        <!-- at 1800px and above --> 
+                                        <source srcset="img/hotel-2.jpg" media="(min-width:112.5em)">
+                                        <!-- at 900px and above-->
+                                        <source srcset="img/hotel-med-2.jpg" media="(min-width:56.25em)">
+                                        <!-- at 300px and above-->
+                                        <source srcset="img/hotel-low-2.jpg" media="(min-width:18.75em)">
+                                        <!-- Fall back for srcset a medium pic -->
+                                        <img srcset="img/hotel-med-2.jpg" alt="Photo of a Hotel 2" class="gallery__photo">
+                                    </picture>
                                 </figure>
 
                                 <figure class="gallery__item">
-                                    <img src="img/hotel-3.jpg" alt="Photo of a hotel 3" class="gallery__photo">
+                                   <picture class="gallery__item">
+                                       <!-- at 1800px and above --> 
+                                       <source srcset="img/hotel-3.jpg" media="(min-width:112.5em)">
+                                       <!-- at 900px and above-->
+                                       <source srcset="img/hotel-med-3.jpg" media="(min-width:56.25em)">
+                                       <!-- at 300px and above-->
+                                       <source srcset="img/hotel-low-3.jpg" media="(min-width:18.75em)">
+                                       <!-- Fall back for srcset a medium pic -->
+                                       <img srcset="img/hotel-med-3.jpg" alt="Photo of a Hotel 3" class="gallery__photo">
+                                   </picture>
                                 </figure>
                             </div>
                         <!-- Gallery section Ends here -->

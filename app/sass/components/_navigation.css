@@ -109,6 +109,26 @@ NAVIGATION-SIDEBAR SECTION STARTS HERE
 		display: none;
 		visibility: hidden;
 	}
+
+
+	&__credits{
+
+		&:link,
+		&:visited{
+			text-decoration: none;
+			background-color: var(--color-grey-dark-1);
+			color: var(--color-grey-light-4);
+			display: inline-block;
+			transition: all .2s;
+		}
+
+		&:hover,
+		&:active {
+			color: var(--color-primary);
+			box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
+			transform: scale(1.3);
+		}
+	}
 }
 
 /*==============================================================================================
